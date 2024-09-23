@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+/* ------------------------perfil-------------------------- */
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+
+/* cambia de color las pestañas  */
+
+.wrapper {
+    align-items: stretch;
+    display: inline-flex;
+    width: 100%;
+    height: 200px;
+   
+  
+}
+
+/* ----------------------cambio de color izquina izquierda------------------------- */
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    background: black;
+    transition: all 0.35s ease-in-out;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow-y: auto;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+    background: var(--bs-dark-bg-subtle);
+}
+
+/* Sidebar Elements Style */
+
+.sidebar-logo {
+    padding: 1.15rem;
+}
+
+.sidebar-logo a {
+    color: #e9ecef;
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-family: Engravers MT;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar-header {
+    color: #e9ecef;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #e9ecef;
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-expand .navbar-nav {
+    margin-left: auto;
+}
+
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+@media (min-width:768px) {
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+
+.card {
+    box-shadow: 0 0 .875rem 0 rgb(0, 0, 0);
+    margin-bottom: 24px;
+}
+
+.illustration {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+/* Sidebar Toggle */
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+/* Footer and Nav */
+
+@media (max-width:767.98px) {
+
+    .js-sidebar {
+        margin-left: -264px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+
+    .navbar,
+    footer {
+        width: 100vw;
+    }
+}
+
+/* Theme Toggler */
+
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-65%);
+    text-align: center;
+    z-index: 10;
+    right: 0;
+    left: auto;
+    border: none;
+    background-color: var(--bs-body-color);
+}
+
+html[data-bs-theme="dark"] .theme-toggle .fa-sun,
+html[data-bs-theme="light"] .theme-toggle .fa-moon {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    font-size: 1.25rem;
+    color: #FFF;
+}
+
+html[data-bs-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
+}
+
+html[data-bs-theme="light"] .theme-toggle .fa-sun {
+    display: none;
+}
+
+.logo{
+  margin: 10px auto;
+  display: block;
+
+}
+
+/* ------------------------------------inicio login  ------------------------------------*/
+
+#inicio{
+    width: 500px;
+    background: rgba(0, 0, 0, 0.473);
+    border-radius: 110px;
+    color: white;
+    margin: 100px;
+    padding: 20px;
+}
+
+/*BIENVENIDA DEL PERFIL*/
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 40px; */
+    padding: auto;
+    background-size: cover;
+    
+}
+
+/* LOGO Y ESTILO DE LETRA Y COLOR    */
+#bienvenida {
+    max-width: 400px;
+    margin: 100px auto; /* Espacio en la parte superior para el logo */
+    padding: 20px;
+    border-radius: 70px;
+    /* box-shadow: rgb(6, 61, 150); */
+    background: rgba(0, 0, 0, 0.473); /* Fondo gris transparente */
+    text-align: center;
+}
+/* ESTILO DE TODOS LOS TEXTOS */
+input[type="text"],
+input[type="password1"],
+input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 0.5px;
+    border-radius: 100px;
+}
+
+
+/*Manejo de ¿Has olvidado la contraseña?*/
+a {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Estilo para el logo */
+.logo {
+    max-width: 50%; /* Ajusta el tamaño del logo según tus necesidades */
+    margin: 20px auto; /* Centra el logo horizontalmente y agrega espacio en la parte superior */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+}
+/*Hace modificación de los Modulos (Usuarios, Empleados, Procesos Juridicos, ETC)*/
+.mr-2{
+    color:rgb(10, 106, 170);
+    width: 23px;
+    height: 23px;
+  }
+input[type="text"] {
+    background-color: transparent; /* Cambia el color del fondo del campo */
+    color: white; /* Cambia el color del texto dentro del campo */
+    border: 2px solid #ffffff; /* Define un borde alrededor del campo */
+    border-radius: 100px; /* Redondea los bordes del campo */
+    padding: 10px; /* Añade espacio dentro del campo */
+    font-size: 16px; /* Define el tamaño del texto */
+    text-align: center;
+}
+
+input[type="password"] {
+    background-color: transparent; /* Cambia el color del fondo del campo */
+    color: rgb(255, 255, 255); /* Cambia el color del texto dentro del campo */
+    border: 2px solid #f7f7f7; /* Define un borde alrededor del campo */
+    border-radius: 100%; /* Redondea los bordes del campo */
+    padding: 10px; /* Añade espacio dentro del campo */
+    font-size: 16px; /* Define el tamaño del texto */
+    text-align: center;
+}
+.esquina {
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde el borde derecho */
+    color: white;
+}
+
+/*ESTILO DE LOGIN*/
+.logo5{
+    width: 350px;
+    height: 200px;
+    }
+    .color-blanco{
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+
+
+/* ------------------------------------inicio tabla registro ------------------------------------*/
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: white;
+    background: #000000;
+  }
+  
+  .container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #contactus {
+    font: 400 12px/16px Georgia, 'Times New Roman', Times, serif;
+      background: rgba(128, 128, 128, 0.336);
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 white, 0 5px 5px 0 aquamarine;
+  }
+  
+  #contactus h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #contactus h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    
+  }
+  
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+    
+  }
+  /*------------------- Esto modifica el texto de registrar----------------------- */
+  #contactus input[type="text"],
+  #contactus input[type="email"],
+  #contactus input[type="tel"],
+  #contactus input[type="url"],
+  #contactus textarea {
+    width: 100%;
+    border: 1px solid #cccccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    text-align: center;
+    font-family:  'Times New Roman', Times, serif;
+    color: black;
+  }
+  /* ------Esto resalta los bordes de registrar-------- */
+  #contactus input[type="text"]:hover,
+  #contactus input[type="email"]:hover,
+  #contactus input[type="tel"]:hover,
+  #contactus input[type="url"]:hover,
+  #contactus textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+   /* -------Estilo de registrarse------- */
+  
+  #contactus button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #0f8888;
+    color: #ffffff;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+ 
+  #contactus button[type="submit"]:hover {
+    background: #2bff00;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #contactus button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --------------- Esto resalta cuando selecciona ------------------- */
+  #contactus input:focus,
+  #contactus textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+  }
+  /* ------ color de la letras------ */
+  ::-webkit-input-placeholder {
+    color: grey;
+  }
+  
+  :-moz-placeholder {
+    color: #00ccff;
+  }
+  
+  ::-moz-placeholder {
+    color: #00ff15;
+  }
+  
+  :-ms-input-placeholder {
+    color: #cc00ff;
+  }
+  /* --------------- MODIFICAR USUARIOS ------------------- */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#modi {
+    max-width: 400px;
+    margin: 85px auto;
+    background-color:rgba(43, 39, 39, 0.788);
+    padding: 20px;
+    border-radius: 28px;
+    box-shadow: 0 5px 30px rgba(255, 255, 255, 0.685);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+select[multiple] {
+    height: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#submit-btn {
+    background-color: rgb(62, 62, 148);
+    color: #050505;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#submit-btn:hover {
+    background-color:white;
+}
+/*-----------------------------------------------INICIO DE LA INFORMACIÓN DE PERFIL---------------------------------------------------*/
+#container6 {
+    margin-top: 20px;
+    color: #ff0000;
+    text-align: left;
+    background-color: #ffffff;    
+}
+
+#main-body {
+    padding: 15px;
+}
+
+#card-profile-image, #card-list-group, #card-details {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+#card-profile-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #cccccc;
+    background-clip: border-box;
+    border: 0 solid rgba(5, 5, 5, 0.125);
+    border-radius: .25rem;
+}
+
+#card-body-profile, #card-body-details {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+#gutters-sm-profile {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+#gutters-sm-profile > .col, #gutters-sm-profile > [class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+#col-profile-left, #col-profile-right {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #005dd7;
+}
+
+.h-100 {
+    height: 100%!important;
+}
+
+.shadow-none {
+    box-shadow: none!important;
+}
+
+/*-----------------------------------------------FIN DE LA INFORMACIÓN DE PERFIL---------------------------------------------------*/
+
+/*-----------------------------------------------INICIO DE LOS BOTONES DE TABLA_PROCESOS---------------------------------------------------*/
+/*Hace modificaciones del boton de juzgados*/
+.juz_gados{
+    position: relative;
+    left: 200%;
+     
+}
+/*-----------------------------------------------FIN DE LOS BOTONES DE TABLA_PROCESOS---------------------------------------------------*/
+
+/*---------------------------------------------MODIFICA DESCRIPCION DE PROCESOS----------------------*/
+#custom-container {
+    margin-top: 40px;
+    width: 75%;
+    
+}
+#custom-container h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+#custom-card-header {
+    background-color: #777777;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+#custom-card-body {
+    background-color: rgba(190, 185, 185, 0.37);
+    color: black;
+    width: 100%;
+    margin:  auto;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    
+}
+#custom-card-title {
+    color: #020202;
+    text-align: center;
+}
+#custom-btn-primary {
+    border: none;
+    color: black;
+}
+#custom-btn-primary:hover {
+    background-color:grey;
+}
+#custom-card {
+    border-radius: 20px; /* Ajusta el valor según lo redondeado que desees los bordes */
+    overflow: hidden; /* Para asegurarte de que el contenido no se desborde */
+}
+#custom-card-body .card-text {
+    text-align: justify;
+    margin: 20px;
+}
+#fon{
+    background: rgba(0, 0, 0, 0.822);
+}
+
+#contenido {
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.637);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.87);
+    border-radius: 10px;
+    color: white;
+}
+#contenido h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+.form-label {
+    font-weight: bold;
+}
+#submit-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+#submit-btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+#cancel-btn {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+#cancel-btn:hover {
+    background-color: #5a6268;
+    border-color: #4e555b;
+}
+/**----------------------------------------Inicio Estilos de formularios usuarios-------------------------------------*/
+/* Estilo del formulario */
+#registro-form {
+    background: rgba(0, 0, 0, 0.548); /* Fondo blanco translúcido */
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Estilo del título */
+#registro-form h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilo de los inputs */
+#registro-form input,
+#registro-form select {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del botón registrar usuario*/
+#registro-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#registro-form button:hover {
+    background-color: #218838;
+}
+
+/* Estilo del enlace */
+#registro-form a.btn-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#registro-form a.btn-link:hover {
+    color: #0056b3;
+}
+
+/* Estilo de los contenedores */
+#registro-form .col-md-2,
+#registro-form .col-md-3,
+#registro-form .col-md-4 {
+    margin-bottom: 15px;
+}
+/**----------------------------------------Fin Estilos de formularios usuarios-------------------------------------*/   
